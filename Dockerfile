@@ -2,5 +2,5 @@ FROM golang:1.23.0
 
 WORKDIR /usr/src/app
 
-COPY ..
+COPY . .
 RUN go mod tidy
