@@ -1,9 +1,10 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/jamesmpuya/tapin-go-api/handlers"
+)
 
 func setupRoutes(app *fiber.App) {
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Tapin Digital App!")
-	})
+	app.Get("/", handlers.Home)
 }
